@@ -10,6 +10,6 @@ for v in "${versions[@]}"; do
         echo "$v: compiles"
     else
         echo "$v: FAILS"
-        grep -E "\[ERROR\].*\.java" "$log" | head -5
+        grep -E "symbol:|location:" "$log" | sort -u | sed 's/^/    /'
     fi
 done

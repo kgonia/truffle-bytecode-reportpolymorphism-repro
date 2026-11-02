@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>repro</groupId>
-    <artifactId>truffle-bytecode-proxy-polymorphism-repro</artifactId>
+    <artifactId>truffle-bytecode-reportpolymorphism-repro</artifactId>
     <version>1.0</version>
 
     <properties>

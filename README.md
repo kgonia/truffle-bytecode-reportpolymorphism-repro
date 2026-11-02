@@ -27,6 +27,7 @@ mvn clean compile                       # Truffle 25.4.4.1.1
 | 25.2.4 | fails, both cases |
 | 25.3.4.1 | fails, both cases |
 | 25.4.4.1.1 (latest release) | fails, both cases |
+| 25.6.0-dev snapshot ([25.6.0-dev-20261102_0204](https://github.com/graalvm/graalvm-ce-dev-builds/releases/tag/25.6.0-dev-20261102_0204), `truffle-dsl-processor-25.6.0-20261102.011351-1`, compiled with javac) | fails, both cases |
 
 ## Error (25.4.4.1.1)
 
@@ -70,8 +71,8 @@ inlined into the bytecode array"):
 It doesn't look intentional: the PR and the CHANGELOG don't mention polymorphism reporting, the DSL doesn't reject or
 warn about `@ReportPolymorphism` on an operation, and none of the Bytecode DSL tests
 (`com.oracle.truffle.api.bytecode.test`, 80 files on master) uses `@ReportPolymorphism`, so the combination is
-untested. Graal master's `canInlineState()` and `createCheckForPolymorphicSpecialize` are still as above (master not
-built).
+untested. Graal master's `canInlineState()` and `createCheckForPolymorphicSpecialize` are still as above, and the
+2026-11-02 snapshot fails the same way.
 
 ## Expected
 
